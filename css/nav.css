@@ -1,0 +1,107 @@
+* {
+    font-family: Helvetica;
+    --hoverLinksColor: rgb(107, 181, 255);
+    --navBgColor: #34278f, #2d1748;
+    --navHeight: 45px;
+    --paddingX: 5vw;
+}
+/* 
+    NAVBAR STYLE
+*/
+.navbar {
+    /* sticky fixed */
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 15px 5vw;
+    height: var(--navHeight);
+    transition: 1.5s;
+}
+.navbar::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 100%;
+    height: 100%;
+    transition: 1s;
+    z-index: -1;
+    width: 100%;
+    background: linear-gradient(-45deg, var(--navBgColor));
+}
+.navbar.hasBgColor::after {
+    background: linear-gradient(-45deg, var(--navBgColor));
+    left: 0;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.7s ease;
+}
+
+nav a:hover {
+    color: var(--hoverLinksColor);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px auto;
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+    /* HAMBURGER */
+    .hamburger {
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* NAV-MENU */
+    .nav-menu {
+        position: fixed;
+        padding-top: 20px;
+        pointer-events: none;
+        top: calc(var(--navHeight) - 1px);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        clip-path: circle(50px at 90% -20%);
+        height: 100vh;
+        width: 100%;
+        background: linear-gradient(-90deg, var(--navBgColor));
+        transition: 1.5s;
+        z-index: 9;
+    }
+    .nav-menu.active {
+        clip-path: circle(100vh at top center);
+        pointer-events: auto;
+    }
+}
