@@ -20,6 +20,7 @@
     padding: 15px 5vw;
     height: var(--navHeight);
     transition: 1.5s;
+    z-index: 9;
 }
 .navbar::after {
     content: "";
