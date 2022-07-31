@@ -24,17 +24,36 @@
     width: fit-content;
     margin-bottom: 5px;
 }
-.intro > h1 {
-    margin: 10px 0;
+.intro h1 {
+    margin: 15px 0;
     width: 80%;
 }
+
+.cursor {
+    display: inline-block;
+    vertical-align: middle;
+    width: 3px;
+    height: 1.1em;
+    background-color: white;
+    animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+    from,
+    to {
+        background-color: transparent;
+    }
+    50% {
+        background-color: white;
+    }
+}
+
 .about {
     padding: 12px;
     border-radius: 15px;
     backdrop-filter: blur(10px);
     max-width: 497px;
     border: 3px dotted #ffffff69;
-    /* background-color: #2d2d2d4a; */
 }
 .spacemanImg {
     width: 100%;
@@ -76,12 +95,14 @@
 .skills {
     padding: var(--paddingX);
     color: white;
+    margin-bottom: 50px;
 }
 .cardSkills {
     background-color: black;
     padding: 20px 30px;
     text-align: center;
     border-radius: 15px;
+    position: relative;
 }
 .circleBars {
     margin-top: 20px;
@@ -116,8 +137,92 @@
     padding: var(--paddingX);
     color: white;
 }
+.cardProjects {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+}
 .projectsGrid {
     display: grid;
     grid-auto-rows: 1fr;
     width: 100%;
+}
+/* 
+    CONTACT
+*/
+.contact {
+    padding: var(--paddingX);
+    background-color: black;
+    border-radius: 20px 20px 0 0;
+    color: white;
+}
+.contact > h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.myContact > p {
+    margin-bottom: 15px;
+}
+.myContact > svg {
+    width: 10vw;
+}
+
+/* 
+    COPYRIGHT
+*/
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--paddingX);
+    background-color: black;
+    color: white;
+}
+.copyright > svg {
+    width: 17px;
+    margin-right: 5px;
+}
+
+/* REPSPONSIVE */
+
+@media screen and (min-width: 1024px) {
+    /* INTRO */
+    * {
+        --navHeight: 60px;
+    }
+    .intro {
+        display: flex;
+        height: 90vh;
+        position: relative;
+        margin-top: calc(var(--navHeight) + 100px);
+    }
+    .text > h1 {
+        font-size: 30px;
+        width: 500px;
+    }
+    .spacemanImg {
+        position: absolute;
+        width: 41%;
+        transform: scaleX(-1);
+        right: 0;
+    }
+
+    /* SKILLS */
+
+    .circleBars {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        padding: 0;
+    }
+    .cardSkills {
+        padding: 31px 81px;
+    }
+    .buttCV {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -55px);
+        bottom: -99px;
+    }
 }
