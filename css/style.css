@@ -1,3 +1,38 @@
+.splashScreen {
+    z-index: 12;
+    position: fixed;
+    height: 100vh;
+    right: 0;
+    left: 0;
+    opacity: 1;
+    transition: 1s;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.splashScreen.load {
+    animation: fade 1s forwards;
+}
+.splashScreen > h1 {
+    font-family: cursive;
+    font-size: 10vw;
+    transform: translateY(-15px);
+    animation: splashText 1s infinite alternate cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes splashText {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes fade {
+    to {
+        opacity: 0;
+    }
+}
+
 .bg {
     position: fixed;
     height: 100vh;
