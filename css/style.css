@@ -93,3 +93,31 @@
     padding: 15vw;
     justify-content: center;
 }
+.buttCV {
+    text-decoration: none;
+    background: linear-gradient(45deg, #ea01de, #4d03a7);
+    color: white;
+    padding: 30px 15px;
+    border-radius: 9px;
+    font-weight: bold;
+}
+
+/* CV */
+.imgCV {
+    display: block;
+    margin: calc(var(--navHeight) + 20px) auto;
+    width: 90%;
+    border-radius: 5px;
+}
+/* 
+    PROJECTS    
+*/
+.projects {
+    padding: var(--paddingX);
+    color: white;
+}
+.projectsGrid {
+    display: grid;
+    grid-auto-rows: 1fr;
+    width: 100%;
+}

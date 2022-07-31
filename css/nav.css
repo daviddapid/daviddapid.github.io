@@ -15,7 +15,7 @@
     transition: 1.5s;
     z-index: 10;
 }
-/* .navbar::after {
+.navbar::after {
     content: "";
     position: absolute;
     right: 0;
@@ -24,12 +24,11 @@
     transition: 1s;
     z-index: -1;
     width: 100%;
-    background: linear-gradient(-45deg, var(--navBgColor));
 }
 .navbar.hasBgColor::after {
-    background: linear-gradient(-45deg, var(--navBgColor));
+    backdrop-filter: blur(10px);
     left: 0;
-} */
+}
 
 .nav-menu {
     list-style: none;
@@ -94,8 +93,8 @@ nav a:hover {
         clip-path: circle(50px at 90% -20%);
         height: 100vh;
         width: 100%;
-        background: linear-gradient(-90deg, var(--navBgColor));
-        transition: 1.5s;
+        backdrop-filter: blur(15px);
+        transition: 1s;
         z-index: 9;
     }
     .nav-menu.active {
