@@ -1,0 +1,7 @@
+* {
+    font-family: Helvetica;
+    --hoverLinksColor: rgb(107, 181, 255);
+    --navBgColor: #34278f, #2d1748;
+    --navHeight: 45px;
+    --paddingX: 5vw;
+}
