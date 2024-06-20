@@ -51,14 +51,14 @@ export default function Page() {
 					direction="right"
 					speed="normal"
 					icons={[
-						<LaravelIcon />,
-						<MysqlIcon />,
-						<NextJsIcon />,
-						<GolangIcon />,
-						<VueIcon />,
-						<PostgreSql />,
-						<NuxtIcon />,
-						<ReactIcon />,
+						<LaravelIcon key={"laravel-icon"} />,
+						<MysqlIcon key={"mysql-icon"} />,
+						<NextJsIcon key={"nextjs-icon"} />,
+						<GolangIcon key={"golang-icon"} />,
+						<VueIcon key={"vue-icon"} />,
+						<PostgreSql key={"postgre-icon"} />,
+						<NuxtIcon key={"nuxt-icon"} />,
+						<ReactIcon key={"react-icon"} />,
 					]}
 				/>
 			</div>
