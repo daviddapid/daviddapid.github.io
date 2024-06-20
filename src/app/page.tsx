@@ -1,7 +1,10 @@
 import { Card } from "@/components/my/card";
 import { CardProject } from "@/components/my/card-project";
 import { Globe } from "@/components/my/globe";
+import { MysqlIcon } from "@/components/my/icons/mysql-icon";
 import { InputField } from "@/components/my/input-field";
+import { LaravelIcon } from "@/components/my/icons/laravel-icon";
+import { NextJsIcon } from "@/components/my/icons/nextjs-icon";
 import { SertifCard, SertifCardComingSoon } from "@/components/my/sertif-card";
 import { TextField } from "@/components/my/text-area-field";
 import { TextHero } from "@/components/my/text-hero";
@@ -9,13 +12,22 @@ import { TextSection } from "@/components/my/text-section";
 import { Spotlight } from "@/components/ui/Spotlight";
 import { Button } from "@/components/ui/button";
 import { World } from "@/components/ui/globe";
+import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import Image from "next/image";
+import { GolangIcon } from "@/components/my/icons/golang-icon";
+import { VueIcon } from "@/components/my/icons/vue-icon";
+import { PostgreSql } from "@/components/my/icons/postgresql-icon";
+import { NuxtIcon } from "@/components/my/icons/nuxt-icon";
+import { ReactIcon } from "@/components/my/icons/react-icon";
 export default function Page() {
 	return (
 		<>
+			{/* GRID BG */}
 			<div className="dark:bg-grid-white/[0.2] bg-grid-black/[0.2] absolute top-0 left-0 h-screen w-screen">
 				<div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 			</div>
+
+			{/* HERO SECTION */}
 			<section
 				id="hero"
 				className="h-screen-navbar relative w-full"
@@ -28,11 +40,34 @@ export default function Page() {
 				<Spotlight fill="white" />
 				<TextHero />
 			</section>
+
+			{/* SKILL */}
+			<div className="mb-8">
+				<InfiniteMovingCards
+					speed="normal"
+					names={["laravel", "next js", "golang", "nuxt js", "vue js", "mysql", "postgresql"]}
+				/>
+				<InfiniteMovingCards
+					direction="right"
+					speed="normal"
+					icons={[
+						<LaravelIcon />,
+						<MysqlIcon />,
+						<NextJsIcon />,
+						<GolangIcon />,
+						<VueIcon />,
+						<PostgreSql />,
+						<NuxtIcon />,
+						<ReactIcon />,
+					]}
+				/>
+			</div>
+			{/* EXPERIENCE SECTION */}
 			<section
 				id="projects"
 				className="min-h-screen"
 			>
-				<TextSection text="PROJECTS" />
+				<TextSection text="EXPERIENCE" />
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-3">
 					<div className="md:col-span-2 md:row-span-2">
 						<CardProject
@@ -56,7 +91,9 @@ export default function Page() {
 					/>
 				</div>
 			</section>
-			<section className="sertificates min-h-screen">
+
+			{/* SERTIFICATE */}
+			<section className="sertificates min-h-screen mt-24 md:mt-0">
 				<TextSection text="MY SERTIFICATES" />
 				<div className="grid grid-cols-1 gap-3 md:grid md:grid-cols-3 ">
 					<SertifCard
@@ -72,9 +109,11 @@ export default function Page() {
 					<SertifCardComingSoon />
 				</div>
 			</section>
+
+			{/* CONTACT SECTION */}
 			<section
 				id="contacts"
-				className="min-h-screen mb-5"
+				className="min-h-screen mb-5 mt-24 md:mt-0"
 			>
 				<TextSection text="GET IN TOUCH" />
 				<div className="grid grid-cols-1 gap-5 md:grid-cols-2">

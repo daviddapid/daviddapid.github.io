@@ -20,7 +20,7 @@ const projectVariants = {
 
 export function CardProject({ img, title, description, link }: props) {
 	return (
-		<div className="w-full h-full rounded-xl relative overflow-hidden border border-slate-300 dark:border-slate-600 shadow-md p-3 md:p-0 md:shadow-none">
+		<div className="w-full h-full rounded-xl relative overflow-hidden border border-slate-300 dark:border-slate-700 shadow-md p-3 md:p-0 md:shadow-none">
 			<Image
 				src={img}
 				alt={title}
@@ -35,7 +35,7 @@ export function CardProject({ img, title, description, link }: props) {
 				{link && (
 					<LinkBorder
 						href={link}
-						className="rounded-xl w-fit border-slate-600 ml-auto"
+						className="rounded-xl w-fit border-slate-700 ml-auto"
 					/>
 				)}
 			</div>
