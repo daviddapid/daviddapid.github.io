@@ -1,9 +1,13 @@
+import { Card } from "@/components/my/card";
 import { CardProject } from "@/components/my/card-project";
 import { Globe } from "@/components/my/globe";
+import { InputField } from "@/components/my/input-field";
 import { SertifCard, SertifCardComingSoon } from "@/components/my/sertif-card";
+import { TextField } from "@/components/my/text-area-field";
 import { TextHero } from "@/components/my/text-hero";
 import { TextSection } from "@/components/my/text-section";
 import { Spotlight } from "@/components/ui/Spotlight";
+import { Button } from "@/components/ui/button";
 import { World } from "@/components/ui/globe";
 import Image from "next/image";
 export default function Page() {
@@ -66,6 +70,80 @@ export default function Page() {
 						img={{ src: "/traspac.png", alt: "sertif juara 1 traspac competition" }}
 					/>
 					<SertifCardComingSoon />
+				</div>
+			</section>
+			<section
+				id="contacts"
+				className="min-h-screen mb-5"
+			>
+				<TextSection text="GET IN TOUCH" />
+				<div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+					<Card className="bg-white shadow-md">
+						<h1 className="text-2xl mb-5">Send Me Email</h1>
+						<form
+							action="mailto:daviddapid19@gmail.com"
+							method="post"
+						>
+							<InputField
+								label="name"
+								type="text"
+								name="name"
+							/>
+							<InputField
+								label="Email"
+								type="email"
+								name="email"
+							/>
+							<TextField
+								label="what can i help u?"
+								name="message"
+							/>
+							<Button
+								className="px-5"
+								type="submit"
+							>
+								Send
+							</Button>
+						</form>
+					</Card>
+					<div className="grid grid-cols-3 gap-2 w-full h-fit">
+						<Card className="text-center">
+							<a href="https://instagram.com/david.nexious">
+								<Image
+									src={"/ig_icon.png"}
+									alt="instagram"
+									className="w-[39px] mx-auto md:w-[70px]"
+									width={1000}
+									height={1000}
+								/>
+								<p className="hidden md:block mt-3">@david.nexious</p>
+							</a>
+						</Card>
+						<Card className="text-center">
+							<a href="https://wa.me/628813573779">
+								<Image
+									src={"/whatsapp_icon.png"}
+									alt="whatsapp"
+									className="w-[39px] mx-auto md:w-[70px]"
+									width={1000}
+									height={1000}
+								/>
+								<p className="hidden md:block mt-3">(+62) 8813573779</p>
+							</a>
+						</Card>
+						<Card>
+							<a href="mailto:daviddapid19@gmail.com">
+								<Image
+									src={"/gmail_icon.png"}
+									alt="whatsapp"
+									className="w-[39px] mx-auto md:w-[70px]"
+									width={1000}
+									height={1000}
+								/>
+								<p className="hidden md:block mt-3 text-sm mx-[-10px]">daviddapid19@gmail.com</p>
+							</a>
+						</Card>
+					</div>
 				</div>
 			</section>
 		</>
