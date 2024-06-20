@@ -9,6 +9,9 @@ import Image from "next/image";
 export default function Page() {
 	return (
 		<>
+			<div className="dark:bg-grid-white/[0.2] bg-grid-black/[0.2] absolute top-0 left-0 h-screen w-screen">
+				<div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+			</div>
 			<section
 				id="hero"
 				className="h-screen-navbar relative w-full"
@@ -23,7 +26,7 @@ export default function Page() {
 			</section>
 			<section
 				id="projects"
-				className="h-screen"
+				className="min-h-screen"
 			>
 				<TextSection text="PROJECTS" />
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -49,7 +52,7 @@ export default function Page() {
 					/>
 				</div>
 			</section>
-			<section className="sertificates h-screen">
+			<section className="sertificates min-h-screen">
 				<TextSection text="MY SERTIFICATES" />
 				<div className="grid grid-cols-1 gap-3 md:grid md:grid-cols-3 ">
 					<SertifCard
