@@ -1,15 +1,30 @@
+"use client";
 import { HTMLInputTypeAttribute } from "react";
 
-export function InputField({ name, type, label }: { name: string; type: HTMLInputTypeAttribute; label: string }) {
+export function InputField({
+	name,
+	type,
+	label,
+	value,
+	onChange,
+}: {
+	name: string;
+	type: HTMLInputTypeAttribute;
+	label: string;
+	value: string;
+	onChange: (val: string) => void;
+}) {
 	return (
 		<div className="mb-4 ">
 			<label
-				className="block uppercase text-sm tracking-wider text-neutral-500 font-semibold"
+				className="block uppercase text-sm tracking-wider text-neutral-500 dark:text-neutral-300 font-semibold"
 				htmlFor={name}
 			>
 				{label}
 			</label>
 			<input
+				value={value}
+				onChange={(e) => onChange(e.target.value)}
 				type={type}
 				id={name}
 				name={name}

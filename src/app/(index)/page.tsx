@@ -19,6 +19,7 @@ import { VueIcon } from "@/components/my/icons/vue-icon";
 import { PostgreSql } from "@/components/my/icons/postgresql-icon";
 import { NuxtIcon } from "@/components/my/icons/nuxt-icon";
 import { ReactIcon } from "@/components/my/icons/react-icon";
+import { FormEmail } from "@/components/my/form-email";
 export default function Page() {
 	return (
 		<>
@@ -62,9 +63,10 @@ export default function Page() {
 					]}
 				/>
 			</div>
+
 			{/* EXPERIENCE SECTION */}
 			<section
-				id="projects"
+				id="experience"
 				className="min-h-screen"
 			>
 				<TextSection text="EXPERIENCE" />
@@ -93,18 +95,23 @@ export default function Page() {
 			</section>
 
 			{/* SERTIFICATE */}
-			<section className="sertificates min-h-screen mt-24 md:mt-0">
+			<section
+				id="sertificate"
+				className="sertificates min-h-screen mt-24 md:mt-0"
+			>
 				<TextSection text="MY SERTIFICATES" />
 				<div className="grid grid-cols-1 gap-3 md:grid md:grid-cols-3 ">
 					<SertifCard
 						title="Juara 1 Liga SMK"
 						desc="adalah lomba kompetitif programming tingkat nasional yang diadakan oleh SMK KODING"
 						img={{ src: "/liga_smk.png", alt: "sertif juara 1 liga smk" }}
+						href="smk-koding"
 					/>
 					<SertifCard
 						title="Juara 1 Traspac Competition"
 						desc="adalah lomba membuat sistem software tingkat nasional yang diadakan oleh PT.TRASPAC"
 						img={{ src: "/traspac.png", alt: "sertif juara 1 traspac competition" }}
+						href="traspac-competition"
 					/>
 					<SertifCardComingSoon />
 				</div>
@@ -112,38 +119,14 @@ export default function Page() {
 
 			{/* CONTACT SECTION */}
 			<section
-				id="contacts"
+				id="contact"
 				className="min-h-screen mb-5 mt-24 md:mt-0"
 			>
 				<TextSection text="GET IN TOUCH" />
 				<div className="grid grid-cols-1 gap-5 md:grid-cols-2">
 					<Card className="bg-white shadow-md">
 						<h1 className="text-2xl mb-5">Send Me Email</h1>
-						<form
-							action="mailto:daviddapid19@gmail.com"
-							method="post"
-						>
-							<InputField
-								label="name"
-								type="text"
-								name="name"
-							/>
-							<InputField
-								label="Email"
-								type="email"
-								name="email"
-							/>
-							<TextField
-								label="what can i help u?"
-								name="message"
-							/>
-							<Button
-								className="px-5"
-								type="submit"
-							>
-								Send
-							</Button>
-						</form>
+						<FormEmail />
 					</Card>
 					<div className="grid grid-cols-3 gap-2 w-full h-fit">
 						<Card className="text-center">
