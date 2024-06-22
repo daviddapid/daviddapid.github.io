@@ -70,7 +70,7 @@ export default function Page() {
 				className="min-h-screen"
 			>
 				<TextSection text="EXPERIENCE" />
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+				<div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-3">
 					<div className="md:col-span-2 md:row-span-2">
 						<CardProject
 							img="/jatimexpo.png"
