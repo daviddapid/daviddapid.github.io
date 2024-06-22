@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Variants, motion, useAnimate } from "framer-motion";
 import { EyeIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 type props = { img: string; title: string; description: string; link?: string };
 
@@ -12,15 +13,18 @@ const projectVariants: Variants = {
 	},
 	hover: {
 		opacity: 1,
-		pointerEvents: "auto",
 	},
 };
 export function CardProject({ img, title, description, link }: props) {
 	const [scope, animate] = useAnimate();
+	const [isAnimate, setIsAnimate] = useState(false);
 
 	function onTap() {
+		setIsAnimate(true);
 		animate(scope.current, projectVariants.hover);
+
 		setTimeout(() => {
+			setIsAnimate(false);
 			animate(scope.current, projectVariants.initial);
 		}, 2000);
 	}
@@ -38,13 +42,15 @@ export function CardProject({ img, title, description, link }: props) {
 					height={2000}
 					className="w-full object-cover md:h-full "
 				/>
-				<motion.div initial={{ pointerEvents: "none", opacity: 0 }}></motion.div>
 				<motion.div
 					variants={projectVariants}
 					initial="initial"
 					whileHover="hover"
 					ref={scope}
-					className="bg-zinc-800 z-10 bg-opacity-[0.5] backdrop-blur-[7px] absolute top-0 left-0 w-full h-full justify-center items-center flex-col flex pointer-events-none md:pointer-events-auto"
+					className={cn(
+						isAnimate ? "pointer-events-auto" : "pointer-events-none",
+						"bg-zinc-800 z-10 bg-opacity-[0.5] backdrop-blur-[7px] absolute top-0 left-0 w-full h-full justify-center items-center flex-col flex  md:pointer-events-auto"
+					)}
 				>
 					<p className="md:text-xl font-bold text-zinc-100">{title}</p>
 					<p className="text-sm md:text-base text-zinc-200">{description}</p>

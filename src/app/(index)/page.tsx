@@ -77,6 +77,7 @@ export default function Page() {
 							title="Jatim Expo Company Profile"
 							description="website company profile Jatim Expo"
 							link="jatimexpo.id"
+							key={"jatimexpo"}
 						/>
 					</div>
 					<CardProject
@@ -84,12 +85,14 @@ export default function Page() {
 						title="Jatim Expo Company Profile"
 						description="website company profile Jatim Expo"
 						link="jatimexpo.id"
+						key={"desa digital"}
 					/>
 					<CardProject
 						img="/jatimexpo.png"
 						title="Jatim Expo Company Profile"
 						description="website company profile Jatim Expo"
 						link="jatimexpo.id"
+						key={"hanefa"}
 					/>
 				</div>
 			</section>
