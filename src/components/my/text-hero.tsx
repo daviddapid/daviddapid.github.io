@@ -34,7 +34,7 @@ export function TextHero() {
 			{show3 && (
 				<motion.h1>
 					<FlipWords
-						words={["Programmer", "Fullstack", "Cat Lover"]}
+						words={["Programmer", "Fullstack", "Cat Lover", "Backend", "Frontend"]}
 						className="text-5xl md:text-8xl text-yellow-500 dark:text-yellow-400 font-bold"
 					/>
 				</motion.h1>
