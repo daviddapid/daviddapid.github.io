@@ -76,7 +76,7 @@ export default function Page() {
 							img="/jatimexpo.png"
 							title="Jatim Expo Company Profile"
 							description="website company profile Jatim Expo"
-							link="jatimexpo.id"
+							link="https://www.jatimexpo.id/"
 							key={"jatimexpo"}
 						/>
 					</div>
@@ -94,13 +94,36 @@ export default function Page() {
 						link="jatimexpo.id"
 						key={"hanefa"}
 					/>
+					<CardProject
+						img="/jatimexpo.png"
+						title="Jatim Expo Company Profile"
+						description="website company profile Jatim Expo"
+						link="https://www.jatimexpo.id/"
+						key={"bank IAIN"}
+					/>
+					<div className="md:col-span-2 md:row-span-2">
+						<CardProject
+							img="/sampoerna.png"
+							title="Sampoerna Academy"
+							description="website company profile Sampoerna Academy"
+							link="https://www.sampoernaacademy.sch.id/"
+							key={"sampoernaacademy"}
+						/>
+					</div>
+					<CardProject
+						img="/jatimexpo.png"
+						title="Jatim Expo Company Profile"
+						description="website company profile Jatim Expo"
+						link="jatimexpo.id"
+						key={"undangan digital"}
+					/>
 				</div>
 			</section>
 
 			{/* SERTIFICATE */}
 			<section
 				id="sertificate"
-				className="sertificates min-h-screen mt-24 md:mt-0"
+				className="sertificates min-h-screen mt-24 md:mt-28"
 			>
 				<TextSection text="MY SERTIFICATES" />
 				<div className="grid grid-cols-1 gap-3 md:grid md:grid-cols-3 ">
