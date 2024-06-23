@@ -115,7 +115,6 @@ export default function Page() {
 							img="/undangan digital.jpg"
 							title="Undangan Digital"
 							description="sistem e-booking untuk pernikahan + scan QR"
-							link="https://www.sampoernaacademy.sch.id/"
 							key={"sampoernaacademy"}
 						/>
 					</div>
