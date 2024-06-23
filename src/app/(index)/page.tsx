@@ -87,19 +87,19 @@ export default function Page() {
 						// link="jatimexpo.id"
 						key={"desa digital"}
 					/>
+
 					<CardProject
 						img="/jatimexpo.png"
 						title="Jatim Expo Company Profile"
 						description="website company profile Jatim Expo"
 						link="jatimexpo.id"
-						key={"hanefa"}
+						key={"undangan digital"}
 					/>
 					<CardProject
-						img="/jatimexpo.png"
-						title="Jatim Expo Company Profile"
-						description="website company profile Jatim Expo"
-						link="https://www.jatimexpo.id/"
-						key={"bank IAIN"}
+						img="/bank digital.jpg"
+						title="BANK Digital"
+						description="e-learning menabung IAIN Kudus"
+						key={"hanefa"}
 					/>
 					<div className="md:col-span-2 md:row-span-2">
 						<CardProject
@@ -114,8 +114,8 @@ export default function Page() {
 						img="/jatimexpo.png"
 						title="Jatim Expo Company Profile"
 						description="website company profile Jatim Expo"
-						link="jatimexpo.id"
-						key={"undangan digital"}
+						link="https://www.jatimexpo.id/"
+						key={"bank IAIN"}
 					/>
 				</div>
 			</section>
