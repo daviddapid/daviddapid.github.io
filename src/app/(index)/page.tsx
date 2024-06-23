@@ -81,10 +81,10 @@ export default function Page() {
 						/>
 					</div>
 					<CardProject
-						img="/jatimexpo.png"
-						title="Jatim Expo Company Profile"
-						description="website company profile Jatim Expo"
-						link="jatimexpo.id"
+						img="/desa digital.jpg"
+						title="Desa Digital App"
+						description="web app (PWA) sistem administrasi & e-commerce"
+						// link="jatimexpo.id"
 						key={"desa digital"}
 					/>
 					<CardProject

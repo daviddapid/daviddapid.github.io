@@ -36,7 +36,7 @@ export function CardProject({ img, title, description, link }: props) {
 				onClick={onTap}
 			>
 				<Image
-					src={img}
+					src={`/mockup${img}`}
 					alt={title}
 					width={2000}
 					height={2000}
@@ -53,8 +53,8 @@ export function CardProject({ img, title, description, link }: props) {
 					)}
 				>
 					<p className="md:text-xl font-bold text-zinc-100">{title}</p>
-					<p className="text-sm md:text-base text-zinc-200">{description}</p>
-					{link && <LinkBorder href="jatimexpo.id" />}
+					<p className="text-sm md:text-base text-zinc-200 max-w-[70%] text-center">{description}</p>
+					{link && <LinkBorder href={link} />}
 				</motion.div>
 			</div>
 
