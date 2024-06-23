@@ -89,11 +89,11 @@ export default function Page() {
 					/>
 
 					<CardProject
-						img="/jatimexpo.png"
-						title="Jatim Expo Company Profile"
-						description="website company profile Jatim Expo"
-						link="jatimexpo.id"
-						key={"undangan digital"}
+						img="/sampoerna.png"
+						title="Sampoerna Academy"
+						description="website company profile Sampoerna Academy"
+						link="https://www.sampoernaacademy.sch.id/"
+						key={"sampoernaacademy"}
 					/>
 					<CardProject
 						img="/bank digital.jpg"
@@ -101,11 +101,20 @@ export default function Page() {
 						description="e-learning menabung IAIN Kudus"
 						key={"hanefa"}
 					/>
-					<div className="md:col-span-2 md:row-span-2">
+					{/* <div className="md:col-span-2 md:row-span-2">
 						<CardProject
 							img="/sampoerna.png"
 							title="Sampoerna Academy"
 							description="website company profile Sampoerna Academy"
+							link="https://www.sampoernaacademy.sch.id/"
+							key={"sampoernaacademy"}
+						/>
+					</div> */}
+					<div className="md:col-span-2 md:row-span-2">
+						<CardProject
+							img="/undangan digital.jpg"
+							title="Undangan Digital"
+							description="sistem e-booking untuk pernikahan + scan QR"
 							link="https://www.sampoernaacademy.sch.id/"
 							key={"sampoernaacademy"}
 						/>

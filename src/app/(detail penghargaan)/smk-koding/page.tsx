@@ -15,7 +15,7 @@ export default function Page() {
 									alt="foto bersama smk koding"
 									width={1000}
 									height={1000}
-									className="w-full h-[350px] object-cover rounded-md"
+									className="w-full h-[350px] object-cover rounded-md md:h-[450px]"
 								/>
 							</CarouselItem>
 							<CarouselItem>
@@ -24,7 +24,7 @@ export default function Page() {
 									alt="foto bersama smk koding"
 									width={1000}
 									height={1000}
-									className="w-full h-[350px] object-cover rounded-md"
+									className="w-full h-[350px] object-cover rounded-md md:h-[450px]"
 								/>
 							</CarouselItem>
 							<CarouselItem>
@@ -33,7 +33,7 @@ export default function Page() {
 									alt="foto bersama smk koding"
 									width={1000}
 									height={1000}
-									className="w-full h-[350px] object-cover rounded-md"
+									className="w-full h-[350px] object-cover rounded-md md:h-[450px]"
 								/>
 							</CarouselItem>
 						</CarouselContent>
