@@ -20,6 +20,8 @@ import { PostgreSql } from "@/components/my/icons/postgresql-icon";
 import { NuxtIcon } from "@/components/my/icons/nuxt-icon";
 import { ReactIcon } from "@/components/my/icons/react-icon";
 import { FormEmail } from "@/components/my/form-email";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+import Link from "next/link";
 export default function Page() {
 	return (
 		<>
@@ -29,21 +31,16 @@ export default function Page() {
 			</div>
 
 			{/* HERO SECTION */}
-			<section
-				id="hero"
-				className="h-screen-navbar relative w-full"
-			>
-				<Spotlight
-					className="-top-40 left-0 md:left-60 md:-top-20"
-					fill="white"
-				/>
+			<section id="hero" className="h-screen-navbar relative w-full">
+				<Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
 
 				<Spotlight fill="white" />
 				<TextHero />
 			</section>
 
 			{/* SKILL */}
-			<div className="mb-8">
+			<div className="mb-8 relative">
+				<div className="h-full w-[19px] left-[-1rem] bg-red dark:bg-black absolute blur-[19px]"></div>
 				<InfiniteMovingCards
 					speed="normal"
 					names={["laravel", "next js", "golang", "nuxt js", "vue js", "mysql", "postgresql"]}
@@ -65,10 +62,7 @@ export default function Page() {
 			</div>
 
 			{/* EXPERIENCE SECTION */}
-			<section
-				id="experience"
-				className="min-h-screen"
-			>
+			<section id="experience" className="min-h-screen">
 				<TextSection text="EXPERIENCE" />
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-3">
 					<div className="md:col-span-2 md:row-span-2">
@@ -101,15 +95,6 @@ export default function Page() {
 						description="e-learning menabung IAIN Kudus"
 						key={"hanefa"}
 					/>
-					{/* <div className="md:col-span-2 md:row-span-2">
-						<CardProject
-							img="/sampoerna.png"
-							title="Sampoerna Academy"
-							description="website company profile Sampoerna Academy"
-							link="https://www.sampoernaacademy.sch.id/"
-							key={"sampoernaacademy"}
-						/>
-					</div> */}
 					<div className="md:col-span-2 md:row-span-2">
 						<CardProject
 							img="/undangan digital.jpg"
@@ -122,17 +107,20 @@ export default function Page() {
 						img="/jatimexpo.png"
 						title="Jatim Expo Company Profile"
 						description="website company profile Jatim Expo"
-						link="https://www.jatimexpo.id/"
-						key={"bank IAIN"}
+						key={"coming sooin"}
 					/>
+				</div>
+				<div className="flex w-full justify-center mt-12">
+					<Link href={"#contact"}>
+						<HoverBorderGradient className="capitalize text-xl md:text-2xl">
+							request a demo project
+						</HoverBorderGradient>
+					</Link>
 				</div>
 			</section>
 
 			{/* SERTIFICATE */}
-			<section
-				id="sertificate"
-				className="sertificates min-h-screen mt-24 md:mt-28"
-			>
+			<section id="sertificate" className="sertificates min-h-screen mt-24 md:mt-28">
 				<TextSection text="MY SERTIFICATES" />
 				<div className="grid grid-cols-1 gap-3 md:grid md:grid-cols-3 ">
 					<SertifCard
@@ -152,10 +140,7 @@ export default function Page() {
 			</section>
 
 			{/* CONTACT SECTION */}
-			<section
-				id="contact"
-				className="min-h-screen mb-5 mt-24 md:mt-0"
-			>
+			<section id="contact" className="min-h-screen mb-5 mt-24 md:mt-0">
 				<TextSection text="GET IN TOUCH" />
 				<div className="grid grid-cols-1 gap-5 md:grid-cols-2">
 					<Card className="bg-white shadow-md">
@@ -172,7 +157,7 @@ export default function Page() {
 									width={1000}
 									height={1000}
 								/>
-								<p className="hidden md:block mt-3">@david.nexious</p>
+								<p className="hidden xl:block mt-3">@david.nexious</p>
 							</a>
 						</Card>
 						<Card className="text-center">
@@ -184,7 +169,7 @@ export default function Page() {
 									width={1000}
 									height={1000}
 								/>
-								<p className="hidden md:block mt-3">(+62) 8813573779</p>
+								<p className="hidden xl:block mt-3">(+62) 8813573779</p>
 							</a>
 						</Card>
 						<Card>
@@ -196,7 +181,7 @@ export default function Page() {
 									width={1000}
 									height={1000}
 								/>
-								<p className="hidden md:block mt-3 text-sm mx-[-10px]">daviddapid19@gmail.com</p>
+								<p className="hidden xl:block mt-3 text-sm mx-[-10px] text-wrap">daviddapid19@gmail.com</p>
 							</a>
 						</Card>
 					</div>

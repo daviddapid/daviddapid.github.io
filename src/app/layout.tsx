@@ -18,12 +18,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={inter.className + " overflow-x-hidden"}>
-				<ThemeProvider
-					attribute="class"
-					defaultTheme="system"
-					enableSystem
-					disableTransitionOnChange
-				>
+				<ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
 					{children}
 				</ThemeProvider>
 			</body>
