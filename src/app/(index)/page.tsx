@@ -90,11 +90,12 @@ export default function Page() {
 						key={"sampoernaacademy"}
 					/>
 					<CardProject
-						img="/bank digital.jpg"
-						title="BANK Digital"
-						description="e-learning menabung IAIN Kudus"
-						key={"hanefa"}
+						img="/finstyle.jpg"
+						title="FinStyle Mobile App"
+						description="An app to Access your insurance and policies dashboard anytime"
+						key={"finstyle"}
 					/>
+
 					<div className="md:col-span-2 md:row-span-2">
 						<CardProject
 							img="/undangan digital.jpg"
@@ -104,10 +105,10 @@ export default function Page() {
 						/>
 					</div>
 					<CardProject
-						img="/jatimexpo.png"
-						title="Jatim Expo Company Profile"
-						description="website company profile Jatim Expo"
-						key={"coming sooin"}
+						img="/bank digital.jpg"
+						title="BANK Digital"
+						description="e-learning menabung IAIN Kudus"
+						key={"hanefa"}
 					/>
 				</div>
 				<div className="flex w-full justify-center mt-12">
@@ -181,7 +182,9 @@ export default function Page() {
 									width={1000}
 									height={1000}
 								/>
-								<p className="hidden xl:block mt-3 text-sm mx-[-10px] text-wrap">daviddapid19@gmail.com</p>
+								<p className="hidden xl:block mt-3 text-sm mx-[-10px] text-wrap">
+									daviddapid19@gmail.com
+								</p>
 							</a>
 						</Card>
 					</div>
