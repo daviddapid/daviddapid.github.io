@@ -90,7 +90,7 @@ export default function Page() {
 						key={"sampoernaacademy"}
 					/>
 					<CardProject
-						img="/finstyle.jpg"
+						img="/undangan digital.jpg"
 						title="FinStyle Mobile App"
 						description="An app to Access your insurance and policies dashboard anytime"
 						key={"finstyle"}
