@@ -5,7 +5,7 @@ import { EyeIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 
-type props = { img: string; title: string; description: string; link?: string };
+type props = { img: string; title: string; description: string; link?: string; isEmpty?: boolean };
 
 const projectVariants: Variants = {
 	initial: {
@@ -15,7 +15,7 @@ const projectVariants: Variants = {
 		opacity: 1,
 	},
 };
-export function CardProject({ img, title, description, link }: props) {
+export function CardProject({ img, title, description, link, isEmpty }: props) {
 	const [scope, animate] = useAnimate();
 	const [isAnimate, setIsAnimate] = useState(false);
 
@@ -31,17 +31,19 @@ export function CardProject({ img, title, description, link }: props) {
 
 	return (
 		<div className="w-full h-full ">
-			<div
-				className="relative w-full rounded-xl overflow-hidden md:h-full"
-				onClick={onTap}
-			>
-				<Image
-					src={`/mockup${img}`}
-					alt={title}
-					width={2000}
-					height={2000}
-					className="w-full object-cover md:h-full "
-				/>
+			<div className="relative w-full rounded-xl overflow-hidden md:h-full" onClick={onTap}>
+				{isEmpty ? (
+					<div className="w-full object-cover md:h-full bg-gray-300 height-[200px]"></div>
+				) : (
+					<Image
+						src={`/mockup${img}`}
+						alt={title}
+						width={2000}
+						height={2000}
+						className="w-full object-cover md:h-full "
+					/>
+				)}
+
 				<motion.div
 					variants={projectVariants}
 					initial="initial"

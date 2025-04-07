@@ -89,12 +89,7 @@ export default function Page() {
 						link="https://www.sampoernaacademy.sch.id/"
 						key={"sampoernaacademy"}
 					/>
-					<CardProject
-						img="/undangan digital.jpg"
-						title="FinStyle Mobile App"
-						description="An app to Access your insurance and policies dashboard anytime"
-						key={"finstyle"}
-					/>
+					<CardProject isEmpty={true} img="/undangan digital.jpg" title="" description="" key={"dfasdf"} />
 
 					<div className="md:col-span-2 md:row-span-2">
 						<CardProject
