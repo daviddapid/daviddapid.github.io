@@ -89,8 +89,12 @@ export default function Page() {
 						link="https://www.sampoernaacademy.sch.id/"
 						key={"sampoernaacademy"}
 					/>
-					<CardProject isEmpty={true} img="/undangan digital.jpg" title="" description="" key={"dfasdf"} />
-
+					<CardProject
+						img="/bank digital.jpg"
+						title="BANK Digital"
+						description="e-learning menabung IAIN Kudus"
+						key={"hanefa"}
+					/>
 					<div className="md:col-span-2 md:row-span-2">
 						<CardProject
 							img="/undangan digital.jpg"
@@ -100,10 +104,10 @@ export default function Page() {
 						/>
 					</div>
 					<CardProject
-						img="/bank digital.jpg"
-						title="BANK Digital"
-						description="e-learning menabung IAIN Kudus"
-						key={"hanefa"}
+						img="/jatimexpo.png"
+						title="Jatim Expo Company Profile"
+						description="website company profile Jatim Expo"
+						key={"coming sooin"}
 					/>
 				</div>
 				<div className="flex w-full justify-center mt-12">
@@ -184,6 +188,11 @@ export default function Page() {
 						</Card>
 					</div>
 				</div>
+			</section>
+
+			{/* HOST HIDDEN IMAGE */}
+			<section className="hidden">
+				<Image alt="abcx" src="/mockup/finstyle.jpg" width={1000} height={1000} />
 			</section>
 		</>
 	);
